@@ -123,7 +123,7 @@ print("\n\n\tHello There! Welcome to Split_8D_Player...\n-By Default a Song is k
 print("\n\n\t\tJust a Moment...")
 time.sleep(5)
 window_surface = pygame.display.set_mode((800, 600))
-pygame.display.set_caption("PyEuphony")
+pygame.display.set_caption("Split Player")
 gameIcon = pygame.image.load(r'C:\Users\Karvy Distribution\OneDrive\Desktop\Akshat\Projects\8D Music\1.jpg')
 pygame.display.set_icon(gameIcon)
 board = pygame.Surface((800, 600))

@@ -23,7 +23,7 @@ Supposed To Be A 8DPlayer.... You Decide....
                 
 ## Contributors: 
  * Akshat{Developer}🖋️
- * Carly{Suggestor}❤️
+ * Carly{Suggester}❤️
  * Manasvi{Google girl}✌️
  * Maybe u{Contributor??}!
  

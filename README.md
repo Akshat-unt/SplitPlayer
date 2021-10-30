@@ -14,9 +14,11 @@ Supposed To Be A 8DPlayer.... You Decide....
 - comes with its own kinda Visualizer! First in segment!😅
 
 ## ***ShortCuts***
--p:Play;        -k:Pause
-        q-Quit;
--m:Mute;        -l:Unmute
+- p:Play; 
+- k:Pause
+- q:Quit;
+- m:Mute;  
+- l:Unmute
 
 -You can change the song using the 'File'(Top-Left)
         ***No Need TO Click,Hover Is Considered as Click***

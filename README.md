@@ -23,7 +23,13 @@ Supposed To Be A 8DPlayer.... You Decide....
  You can change the song using the 'File'(Top-Left)
 - ***No Need TO Click,Hover Is Considered as Click***
 - **Cannot Change Seek**
-                
+
+## Working:
+
+
+https://user-images.githubusercontent.com/66832771/139588314-0096e236-d8e5-41ef-8da7-fc12b3f0ba5a.mp4
+
+
                 
 ## Contributors: 
  * Akshat{Developer}🖋️

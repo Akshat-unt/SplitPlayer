@@ -1,4 +1,4 @@
-# HAPPY HALLOWEEN buddy!
+# HAPPY HALLOWEEN buddy☠️!
 
 # Split Player
 Hello There! Welcome to SplitPlayer...
@@ -20,9 +20,9 @@ Supposed To Be A 8DPlayer.... You Decide....
 - m:Mute;  
 - l:Unmute
 
--You can change the song using the 'File'(Top-Left)
-        ***No Need TO Click,Hover Is Considered as Click***
-                **Cannot Change Seek**
+ You can change the song using the 'File'(Top-Left)
+- ***No Need TO Click,Hover Is Considered as Click***
+- **Cannot Change Seek**
                 
                 
 ## Contributors: 

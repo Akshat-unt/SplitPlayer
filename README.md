@@ -34,6 +34,7 @@ Run it Yourself for 8D experience!
 ## Contributors: 
  * Akshat{Developer}🖋️
  * Carly{Suggester}❤️
+ * Manasvi{Google girl}
  * Maybe u{Contributor??}!
  
 ## Contributing:

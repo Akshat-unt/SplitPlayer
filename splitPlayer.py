@@ -34,8 +34,7 @@ def layout(board,left,right,sound,dif,angle,stride,speed):
     pygame.draw.circle(board,(255,255,25),(y,400),10)
     pygame.draw.line(board,(20,20,200),(570,510),(700,510),6)#Speed
     y = 570
-    if(speed>1):
-        speed=1
+    speed = min(speed, 1)
     y+=speed*130
     pygame.draw.circle(board,(255,255,25),(y,510),10)
     #8D stop
@@ -167,27 +166,29 @@ while True:
         if event.type == pygame.QUIT:
             exit()
 
-        if event.type == pygame.USEREVENT:
-            if event.user_type == pygame_gui.UI_BUTTON_PRESSED:
-                if event.ui_element == file_selection_button:
-                    file_selection = UIFileDialog(rect=Rect(0, 0, 300, 300), manager=manager, allow_picking_directories=True)
+        if (
+            event.type == pygame.USEREVENT
+            and event.user_type == pygame_gui.UI_BUTTON_PRESSED
+        ):
+            if event.ui_element == file_selection_button:
+                file_selection = UIFileDialog(rect=Rect(0, 0, 300, 300), manager=manager, allow_picking_directories=True)
 
-                if event.ui_element == file_selection.ok_button:
-                    rodda = str(file_selection.current_file_path)
-                    file_name=rodda
-                    sega = rodda.split('.')[-1]
-                    if('mp3' in sega):
-                        sound = pygame.mixer.Sound(file_name)
-                        channel.play(sound)
-                        z=datetime.datetime.now()
-                        wes = datetime.datetime.now()
-                        elapsed=0
-                    else:
-                        print("Kindly Give Mp3 Format!!!!")
-                        pygame.quit()
-                        exit()
+            if event.ui_element == file_selection.ok_button:
+                rodda = str(file_selection.current_file_path)
+                file_name=rodda
+                sega = rodda.split('.')[-1]
+                if('mp3' in sega):
+                    sound = pygame.mixer.Sound(file_name)
+                    channel.play(sound)
+                    z=datetime.datetime.now()
+                    wes = datetime.datetime.now()
+                    elapsed=0
+                else:
+                    print("Kindly Give Mp3 Format!!!!")
+                    pygame.quit()
+                    exit()
 
-                    x= datetime.datetime.now()
+                x= datetime.datetime.now()
         manager.process_events(event)
 
     manager.update(time_delta)
@@ -195,7 +196,7 @@ while True:
     manager.draw_ui(window_surface)
     y= datetime.datetime.now()
 
-    if((y-x).total_seconds()>speed):
+    if ((y-x).total_seconds()>speed):
         a+=temp[0]*stride
         b+=(temp[1]*stride)
         if(a<0.01 and b>0.9):
@@ -204,12 +205,11 @@ while True:
         if(b<0.01 and a>0.9):
             a,b=1,0
             temp[0],temp[1] = temp[1],temp[0]
-        if(not paused):
-            if(not muted):
-                channel.set_volume(abs(a),b)
+        if (not paused) and (not muted):
+            channel.set_volume(abs(a),b)
         x= datetime.datetime.now()
     angle-=5
-    angle=angle%360
+    angle %= 360
     post = pygame.mouse.get_pos()
 
     if((40<post[0]<80 and 400<post[1]<440) or pygame.key.get_pressed()[pygame.K_p]):
@@ -242,7 +242,7 @@ while True:
         temp2-=600
         temp2/=100
         speed = temp2+.29
-    if(paused and muted==False):
+    if paused and not muted:
         y=datetime.datetime.now()
         wes=datetime.datetime.now()
 
